@@ -44,7 +44,7 @@ body {
         background-color: none; 
     }
     .enterbtn:hover{
-        background-color:rgb(rgb0, 0, 0);
+        background-color:rgb(0, 0, 0);
         color:  pink;
         font-weight: bold;
     }
@@ -71,16 +71,11 @@ body {
 .maingrid section {
     display: flex;
     position: relative;
-    /* align-items: center; */
-    /* justify-content: center; */
-	/* padding: 5px; */
     background-color: rgb(223, 212, 212, 0.8);
 	font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: black;
-    /* box-shadow: 0.3em 0em 1em 1em ; */
-    /* height: 100vh; */
 }
 #link {
     grid-area: links;
@@ -106,7 +101,6 @@ body {
         color: black;
       }
 #navigation {
-    /* grid-area: nav; */
     display: flex;
     grid-column: 1/8;
     grid-row: 2;
@@ -181,7 +175,7 @@ section img{
     grid-column: 1/8;
     grid-row: 4;  
     flex-direction: column;
-    border: none; 
+    border: 3px white; 
     margin-top: 5px;
     margin-right: 15px;
     margin-left: 15px;
@@ -284,7 +278,7 @@ section img{
     font-size: 0.8em;
 }
 #resume {
-    height: 70px;
+    min-height: 70px;
 }
 #resume a:link {
     color:white;
@@ -295,7 +289,7 @@ section img{
 }
 #resume a:hover {
         grid-area: links;
-        color: rgb(37,136,166);
+        color: pink;
     }
 #resume a:active {
         color: white;
@@ -329,7 +323,7 @@ article p{
 @media screen and (min-width: 480px) and (max-width: 799px)
 {
     .maingrid section {
-    background-color: rgba(87, 87, 94, 0.4);
+    background-color: rgb(223, 212, 212, 0.8);
 	font-size: 1.5em;
     font-weight: 300;
     color: white;
@@ -394,6 +388,7 @@ article p{
     #aboutme {
         display: flex;
         grid-column: 1/8;
+        border: 3px solid white;
     }
     #aboutme .aboutmesect p {
         font-size: 14px;
@@ -408,7 +403,7 @@ article p{
         grid-template-columns: 1fr;
         grid-column: 1/4; 
         min-height: 70%;
-        border: 1px solid #fff;
+        border: 3px solid #fff;
     }
     
     .aboutmesect article{
@@ -443,12 +438,20 @@ article p{
 
 
   /*CONTENT FOR PORTFOLIO PAGE*/
-.nested article .icons {
+  .nested article .icons {
     float:left;
     display: flex;
     flex-direction: row;
-    width: 170px;
-    height: 170px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+.nested article .eicons {
+    float:left;
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 70px;
     margin-bottom: 5px;
 }
     /* grid for blog page */
@@ -496,7 +499,6 @@ article p {
     grid-template-columns: 230px 1fr 1fr 230px 1fr 1fr 230px;
     grid-template-rows: 40px 40px 230px  3fr;
     grid-gap: 20px 20px; 
-    margin-block-end: 20px;  
 } 
 
 #link {
@@ -515,22 +517,24 @@ article p {
     letter-spacing: 0.3em;
 }
 /* image properties for top three pitcures */
+
 section img{
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 190px;
+    min-height: 190px;
     display: flex;
     justify-items: center;
-    padding: 15px;  
+    padding: 20px;  
 }
+
 #image2 {
     display: flex;
     grid-column: 1/2;
     grid-row: 3;
     justify-content: center;
-    min-width: 230px;
-    min-height: 230px;
+    min-width: 190px;
+    min-height: 190px;
     background-color: white;
-    align-content: center;  
+    align-content: center;
 }
 
 #image1 {
@@ -542,18 +546,19 @@ section img{
         min-height: 230px;
         align-content: center;
         background-color: white;
-        margin-left: 0px;
-}
+        margin-left:0px;
+} 
 
 #image3 {
     display: flex;
     grid-column: 7/8;
     grid-row: 3;
     justify-content: right;
-    min-width: 230px;
-    min-height: 230px;
+    max-width: 230px;
+    max-height: 230px;
     align-content: center;
     background-color: white;
+    margin-right: -10px;
 }
 /*MAIN CONTENT DIMENSIONS FOR ALL PAGES*/
 #aboutme {
@@ -591,18 +596,30 @@ section img{
     font-size: 16px;
 }
 /*PORTFOLIO PAGE*/
-.nested article .icons {
+.nested article section img .icons {
+    float:left;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.nested article .eicons {
     float:left;
     display: flex;
     flex-direction: row;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 5px;
 }
+
 /*BLOG PAGE - CONTENT SECTION*/
 /*GRID SIZING*/
 .nested {
     margin: 20px;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 10px;
     grid-column: 1/4; 
 }
@@ -617,7 +634,7 @@ section img{
     padding: 20px;
     margin: 10px;
     margin-bottom: 20px;
-    min-height: 300px;
+    min-height: 500px;
     font-size: 16px;
 }
 
